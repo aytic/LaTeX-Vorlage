@@ -1,0 +1,41 @@
+% Dokumententyp
+\documentclass[paper=a4,fontsize=11pt]{scrartcl}
+
+% Packages
+\input{includes/UsePackage.tex}
+
+% Deckblatt
+\input{includes/Deckblatt.tex}
+
+%Titel für jede einzelen Seite
+%\pagestyle{headings}
+
+% Dokumenten Beginn
+\begin{document}
+\onehalfspacing
+
+% Deckblatt mit Überschrift ohne Seitenzahl
+\maketitle
+\thispagestyle{empty}
+
+% Inhaltsverzeichnis
+\newpage
+\tableofcontents
+
+\newpage
+
+% Inhalt
+\input{includes/Inhalt/1_Kapitel.tex}
+\input{includes/Inhalt/2_Kapitel.tex}
+
+\newpage
+
+% Quellen- und Literaturverzeichnis
+\renewcommand{\refname}{Quellenverzeichnis}
+\bibliographystyle{abbrvdin}
+\bibliography{Quellenverzeichnis}
+
+% Echtheitserklaerung
+\input{includes/Echtheitserklaerung.tex}
+
+\end{document}
